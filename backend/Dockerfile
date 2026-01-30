@@ -27,12 +27,8 @@ RUN composer install --no-interaction --optimize-autoloader
 RUN chown -R www-data:www-data storage bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache
 
-# Clear cache and config after install
-RUN php artisan config:clear && php artisan cache:clear
-
-    # Expose port for Render
+# Expose port for Render
 EXPOSE 10000
 
-# Use Laravel’s artisan serve but bind to $PORT
-CMD ["sh", "-c", "php artisan key:generate --force || true &&  php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
-
+# Runtime command: Laravel serve binds to Render's PORT
+CMD ["sh", "-c", "php artisan key:generate --force || true && php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
