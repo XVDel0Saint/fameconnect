@@ -63,20 +63,17 @@ composer install
 Create .env file (copy from .env.example) and set database and app details:
 ```
 bash
-Copy code
 cp .env.example .env
 php artisan key:generate
 ```
 Run migrations:
 ```
 bash
-Copy code
 php artisan migrate
 ```
 Start the backend server:
 ```
 bash
-Copy code
 php artisan serve
 ```
 Default URL: http://127.0.0.1:8000
@@ -87,20 +84,17 @@ Default URL: http://127.0.0.1:8000
 
 ```
 bash
-Copy code
 cd frontend
 npm install
 ```
 Create .env file with your API URL:
 ```
 env
-Copy code
 VITE_API_URL=http://127.0.0.1:8000
 ```
 Run the frontend:
 ```
 bash
-Copy code
 npm run dev
 ```
 Default URL: http://localhost:5173
@@ -121,7 +115,6 @@ Running the Project
 Start Laravel backend:
 ```
 bash
-Copy code
 cd backend
 php artisan serve
 ```
@@ -129,7 +122,6 @@ php artisan serve
 Start Vue frontend:
 ```
 bash
-Copy code
 cd frontend
 npm run dev
 ```
