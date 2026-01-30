@@ -55,6 +55,9 @@ const handleSubmit = async () => {
       import.meta.env.VITE_API_URL + '/api/register',
       {
         method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+        },
         body: formData
       }
     )
