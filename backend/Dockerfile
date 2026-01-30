@@ -23,14 +23,14 @@ COPY . .
 # Install PHP dependencies
 RUN composer install --no-interaction --optimize-autoloader
 
-# Clear cache and config after install
-RUN php artisan config:clear && php artisan cache:clear
-
 # Set permissions for storage & cache
 RUN chown -R www-data:www-data storage bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache
 
-# Expose port for Render
+# Clear cache and config after install
+RUN php artisan config:clear && php artisan cache:clear
+
+    # Expose port for Render
 EXPOSE 10000
 
 # Use Laravel’s artisan serve but bind to $PORT
