@@ -31,4 +31,4 @@ RUN chown -R www-data:www-data storage bootstrap/cache \
 EXPOSE 10000
 
 # Use Laravel’s artisan serve but bind to $PORT
-CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT}"]
+CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
