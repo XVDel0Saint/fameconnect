@@ -33,7 +33,7 @@ The backend exposes RESTful APIs for registration and fetching countries dynamic
 ---
 
 ## Project Structure
-
+```
 backend/ # Laravel backend
 ├─ app/
 │ └─ Http/Controllers/Api/RegistrationController.php
@@ -45,10 +45,7 @@ frontend/ # Vue 3 + Pinia frontend
 │ ├─ views/RegisterStep1.vue
 │ ├─ views/RegisterStep2.vue
 │ └─ views/RegisterStep3.vue
-
-yaml
-Copy code
-
+```
 ---
 
 ## Setup & Installation
