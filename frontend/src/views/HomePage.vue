@@ -45,7 +45,7 @@ const exhibitors = [
   { name: 'Sustainable Fashion House', category: 'Fashion & Accessories', image: 'https://images.pexels.com/photos/3622624/pexels-photo-3622624.jpeg' },
   { name: 'Lifestyle Design Atelier', category: 'Gifts & Lifestyle', image: 'https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg' },
   { name: 'Premium Furniture Collective', category: 'Furniture & Home', image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg' },
-  { name: 'Fashion Heritage House', category: 'Fashion & Accessories', image: 'https://images.pexels.com/photos/3761681/pexels-photo-3761681.jpeg' },
+  { name: 'Fashion Heritage House', category: 'Fashion & Accessories', image: 'https://images.pexels.com/photos/7054451/pexels-photo-7054451.png' },
   { name: 'Modern Design Studio', category: 'Gifts & Lifestyle', image: 'https://images.pexels.com/photos/3652857/pexels-photo-3652857.jpeg' }
 ]
 
