@@ -34,4 +34,4 @@ RUN php artisan config:clear && php artisan cache:clear
 EXPOSE 10000
 
 # Use Laravel’s artisan serve but bind to $PORT
-CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
+CMD ["sh", "-c", "php artisan key:generate --force || true && php artisan config:clear && php artisan cache:clear && php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
