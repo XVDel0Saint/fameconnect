@@ -54,47 +54,59 @@ frontend/ # Vue 3 + Pinia frontend
 
 1. **Install dependencies**:
 
-```bash
+```
+bash
 cd backend
 composer install
-Create .env file (copy from .env.example) and set database and app details:
+```
 
+Create .env file (copy from .env.example) and set database and app details:
+```
 bash
 Copy code
 cp .env.example .env
 php artisan key:generate
+```
 Run migrations:
-
+```
 bash
 Copy code
 php artisan migrate
+```
 Start the backend server:
-
+```
 bash
 Copy code
 php artisan serve
+```
 Default URL: http://127.0.0.1:8000
 
-Frontend (Vue 3 + Vite)
-Install dependencies:
+### Frontend (Vue 3 + Vite)
 
+##Install dependencies:
+
+```
 bash
 Copy code
 cd frontend
 npm install
+```
 Create .env file with your API URL:
-
+```
 env
 Copy code
 VITE_API_URL=http://127.0.0.1:8000
+```
 Run the frontend:
-
+```
 bash
 Copy code
 npm run dev
+```
 Default URL: http://localhost:5173
 
-Environment Variables
+## Environment Variables
+
 Backend (.env)
 
 DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD
@@ -107,17 +119,20 @@ VITE_API_URL – points to your backend server URL
 
 Running the Project
 Start Laravel backend:
-
+```
 bash
 Copy code
 cd backend
 php artisan serve
-Start Vue frontend:
+```
 
+Start Vue frontend:
+```
 bash
 Copy code
 cd frontend
 npm run dev
+```
 Visit the frontend URL (http://localhost:5173) to test the multi-step registration form.
 
 Usage
@@ -127,17 +142,17 @@ Step 2: Company Information – Fill in company details including name, address,
 
 Step 3: Review & Submit – Review all information before submission. Submission sends a POST request to /api/register.
 
-API endpoints:
+## API endpoints:
 
 Endpoint	Method	Description
 /api/countries	GET	Fetch list of countries
 /api/register	POST	Submit registration form
 
-Notes
-Pinia store preserves data across steps but data is lost if the page is reloaded. Consider adding localStorage persistence if needed.
+### Notes
+- Pinia store preserves data across steps but data is lost if the page is reloaded. Consider adding localStorage persistence if needed.
 
-File uploads support .pdf, .doc, .docx only.
+- File uploads support .pdf, .doc, .docx only.
 
-Country dropdown dynamically loads from backend API (/api/countries).
+- Country dropdown dynamically loads from backend API (/api/countries).
 
-Error handling is implemented on both frontend validation and API response.
+- Error handling is implemented on both frontend validation and API response.
