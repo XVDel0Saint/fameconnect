@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://fameconnect-frontend.onrender.com', 'http://localhost:3000'],
+    'allowed_origins' => ['https://fameconnect.onrender.com', 'http://localhost:3000'],
 
     'allowed_origins_patterns' => [],
 
