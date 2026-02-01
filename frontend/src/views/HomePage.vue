@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { Factory, Sparkles, Recycle, Key } from 'lucide-vue-next'
 import Navbar from '../components/Navbar.vue'
 
 const router = useRouter()
@@ -87,23 +88,23 @@ const testimonials = [
 const benefits = [
   {
     title: "Source Directly from Exporters",
-    description: "Engage face-to-face with verified Philippine manufacturers and artisans. Build long-term sourcing relationships without intermediaries—cutting timelines and improving margins.",
-    icon: "🏭"
+    description: "Engage face-to-face with verified Philippine manufacturers and artisans. Build long-term sourcing relationships without intermediaries cutting timelines and improving margins.",
+    icon: Factory
   },
   {
     title: "Discover New Design Trends",
     description: "Be among the first to access collections shaped by global trends and deep cultural roots. Stay ahead of the competition with exclusive product previews.",
-    icon: "✨"
+    icon: Sparkles
   },
   {
     title: "Sustainable & Ethical Craftsmanship",
     description: "Source responsibly made products that honor people, materials, and the environment. Partner with makers committed to fair trade and eco-conscious practices.",
-    icon: "♻️"
+    icon: Recycle
   },
   {
     title: "Exclusive Trade Access",
     description: "Gain entry to curated showcases, private previews, and industry-led conversations. Experience networking opportunities reserved for qualified international buyers.",
-    icon: "🔑"
+    icon: Key
   }
 ]
 
@@ -302,9 +303,15 @@ onUnmounted(() => {
           :style="{ '--animation-delay': `${index * 100}ms` } as any"
         >
           <div class="h-full bg-gray-50 p-8 rounded-lg border border-gray-100 hover:border-fame-green hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-            <div class="text-4xl mb-4">{{ benefit.icon }}</div>
-            <h3 class="text-xl font-semibold text-fame-dark mb-3">{{ benefit.title }}</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">{{ benefit.description }}</p>
+            <!-- replaced from emojis to lucide icons for a cleaner look -->
+            <div class="text-4xl mb-4 flex text-fame-green items-center justify-center"><component
+              :is="benefit.icon"
+              :size="40"
+              :stroke-width="1.5"
+              class="transition-colors duration-300 group-hover:scale-110"
+            /></div>
+            <h3 class="text-xl text-center font-semibold text-fame-green mb-3">{{ benefit.title }}</h3>
+            <p class="text-gray-600 text-center  leading-relaxed text-sm">{{ benefit.description }}</p>
           </div>
         </div>
       </div>
