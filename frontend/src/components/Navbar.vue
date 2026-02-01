@@ -15,7 +15,7 @@ const navItems = [
 const scrollToSection = (id: string) => {
   isMenuOpen.value = false
 
-  // Special case for register - navigate to registration
+  // navigate to registration
   if (id === 'register') {
     router.push('/register/step-1')
     return
@@ -41,15 +41,8 @@ const goToRegister = () => {
         <!-- Logo -->
         <div class="flex-shrink-0 flex items-center">
           <div class="flex items-center gap-2 group cursor-pointer" @click="router.push('/')">
-            <!-- Custom SVG Logo -->
-            <svg class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <!-- Background circle -->
-              <circle cx="50" cy="50" r="48" fill="#1a4d2e" opacity="0.1" stroke="#1a4d2e" stroke-width="2"/>
-              <!-- Main shape - stylized F -->
-              <path d="M 35 25 L 35 75 M 35 25 L 60 25 M 35 48 L 58 48" stroke="#1a4d2e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <!-- Golden accent dot -->
-              <circle cx="70" cy="30" r="5" fill="#fbbf24"/>
-            </svg>
+            <!-- real logo -->
+            <img src="/logo.png" class="w-16 h-16" alt="brand Logo" />
             <span class="text-xl font-serif sm:text-2xl font-bold text-fame-dark hidden sm:block group-hover:text-fame-green transition-colors">FAMEConnect</span>
             <span class="text-sm font-serif sm:text-base font-bold text-fame-dark sm:hidden">FAMEConnect</span>
           </div>
