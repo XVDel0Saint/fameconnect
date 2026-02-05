@@ -3,6 +3,24 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { Factory, Sparkles, Recycle, Key } from 'lucide-vue-next'
 import Navbar from '../components/Navbar.vue'
+import furniture1 from '../assets/furniture&home.jpeg'
+import fashion1 from '../assets/fashion&accessories.jpeg'
+import lifestyle1 from '../assets/gifts&lifestyle.jpeg'
+import furniture2 from '../assets/furniture&home2.jpeg'
+import fashion2 from '../assets/fashion&accessories2.jpeg'
+import lifestyle2 from '../assets/gifts&lifestyle2.jpeg'
+import furniture3 from '../assets/furniture&home3.jpeg'
+import fashion3 from '../assets/fashion&accessories3.jpeg'
+import lifestyle3 from '../assets/gifts&lifestyle3.jpeg'
+import furniturecover from '../assets/fashion&accessories3.jpeg'
+import fashioncover from '../assets/fashion&accessoriescover.jpeg'
+import lifestylecover from '../assets/gifts&lifestylecover.jpeg'
+import hero1 from '../assets/hero1.jpeg'
+import hero2 from '../assets/hero2.jpeg'
+import hero3 from '../assets/hero3.jpeg'
+import hero4 from '../assets/hero4.jpeg'
+import hero5 from '../assets/hero5.jpeg'
+
 
 const router = useRouter()
 
@@ -13,23 +31,23 @@ const heroIsPaused = ref(false)
 
 const heroSlides = [
   {
-    image: 'https://images.pexels.com/photos/33707467/pexels-photo-33707467.jpeg',
+    image: hero1,
     alt: 'Philippine artisan crafting with traditional techniques'
   },
   {
-    image: 'https://images.pexels.com/photos/14695808/pexels-photo-14695808.jpeg',
+    image: hero2,
     alt: 'Skilled weaver creating vibrant textiles on traditional loom'
   },
   {
-    image: 'https://images.pexels.com/photos/31278826/pexels-photo-31278826.jpeg',
+    image: hero3,
     alt: 'Artisan workshop showcasing Southeast Asian craftsmanship'
   },
   {
-    image: 'https://images.pexels.com/photos/7232500/pexels-photo-7232500.jpeg',
+    image: hero4,
     alt: 'Close-up of intricately woven natural materials'
   },
   {
-    image: 'https://images.pexels.com/photos/29448026/pexels-photo-29448026.jpeg',
+    image: hero5,
     alt: 'Elegant handcrafted furniture in luxury interior setting'
   }
 ]
@@ -39,15 +57,15 @@ const currentExhibitorSlide = ref(0)
 const exhibitorAutoplayInterval = ref<number | null>(null)
 
 const exhibitors = [
-  { name: 'Master Woodcraft Studio', category: 'Furniture & Home', image: 'https://images.pexels.com/photos/14071137/pexels-photo-14071137.jpeg' },
-  { name: 'Heritage Textile Collective', category: 'Fashion & Accessories', image: 'https://images.pexels.com/photos/6580549/pexels-photo-6580549.jpeg' },
-  { name: 'Artisan Home Concepts', category: 'Gifts & Lifestyle', image: 'https://images.pexels.com/photos/8313206/pexels-photo-8313206.jpeg' },
-  { name: 'Contemporary Weaving Co.', category: 'Furniture & Home', image: 'https://images.pexels.com/photos/3962664/pexels-photo-3962664.jpeg' },
-  { name: 'Sustainable Fashion House', category: 'Fashion & Accessories', image: 'https://images.pexels.com/photos/3622624/pexels-photo-3622624.jpeg' },
-  { name: 'Lifestyle Design Atelier', category: 'Gifts & Lifestyle', image: 'https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg' },
-  { name: 'Premium Furniture Collective', category: 'Furniture & Home', image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg' },
-  { name: 'Fashion Heritage House', category: 'Fashion & Accessories', image: 'https://images.pexels.com/photos/7054451/pexels-photo-7054451.png' },
-  { name: 'Modern Design Studio', category: 'Gifts & Lifestyle', image: 'https://images.pexels.com/photos/3652857/pexels-photo-3652857.jpeg' }
+  { name: 'Master Woodcraft Studio', category: 'Furniture & Home', image: furniture1 },
+  { name: 'Heritage Textile Collective', category: 'Fashion & Accessories', image: fashion1 },
+  { name: 'Artisan Home Concepts', category: 'Gifts & Lifestyle', image: lifestyle1 },
+  { name: 'Contemporary Weaving Co.', category: 'Furniture & Home', image: furniture2 },
+  { name: 'Sustainable Fashion House', category: 'Fashion & Accessories', image: fashion2 },
+  { name: 'Lifestyle Design Atelier', category: 'Gifts & Lifestyle', image: lifestyle2 },
+  { name: 'Premium Furniture Collective', category: 'Furniture & Home', image: furniture3 },
+  { name: 'Fashion Heritage House', category: 'Fashion & Accessories', image: fashion3 },
+  { name: 'Modern Design Studio', category: 'Gifts & Lifestyle', image: lifestyle3 }
 ]
 
 // Testimonials carousel
@@ -112,17 +130,17 @@ const categories = [
   {
     title: "Furniture & Home",
     description: "Thoughtfully designed furniture and décor crafted from natural materials, blending tradition with modern living.",
-    image: "https://images.pexels.com/photos/35378698/pexels-photo-35378698.jpeg"
+    image: furniturecover
   },
   {
     title: "Fashion & Accessories",
     description: "Contemporary silhouettes and heritage techniques translated into export-ready fashion pieces.",
-    image: "https://images.pexels.com/photos/5864264/pexels-photo-5864264.jpeg"
+    image: fashioncover
   },
   {
     title: "Gifts & Lifestyle",
     description: "Distinctive products that tell authentic Filipino stories through form and function.",
-    image: "https://images.pexels.com/photos/16137850/pexels-photo-16137850.jpeg"
+    image: lifestylecover
   }
 ]
 
@@ -473,7 +491,7 @@ onUnmounted(() => {
     <!-- Background image -->
     <div class="absolute inset-0">
       <img
-        src="https://images.pexels.com/photos/22804190/pexels-photo-22804190.jpeg"
+        src="../assets/ctacover1.jpeg"
         alt="Manila FAME event venue"
         class="w-full h-full object-cover"
       />
