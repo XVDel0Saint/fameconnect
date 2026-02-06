@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { useRegistrationStore } from '../stores/registrationStore'
 
 const route = useRoute()
-const store = useRegistrationStore()
 
 const steps = [
   { number: 1, title: 'Account Information', path: '/register/step-1' },
@@ -49,10 +47,10 @@ const isStepActive = (stepNumber: number) => {
           <div class="flex justify-between mb-4">
             <div v-for="step in steps" :key="step.number" class="flex-1 mr-2">
               <div class="flex flex-col items-center">
-                <div 
+                <div
                   :class="[
                     'w-10 h-10 rounded-full flex items-center justify-center font-semibold mb-2 transition-all',
-                    isStepCompleted(step.number) ? 'bg-green-500 text-white' : 
+                    isStepCompleted(step.number) ? 'bg-green-500 text-white' :
                     isStepActive(step.number) ? 'bg-fame-green text-white ring-2 ring-offset-2 ring-fame-green' :
                     'bg-gray-200 text-gray-600'
                   ]"
@@ -67,7 +65,7 @@ const isStepActive = (stepNumber: number) => {
             </div>
           </div>
           <div class="w-full bg-gray-200 rounded-full h-2">
-            <div 
+            <div
               class="bg-fame-green h-2 rounded-full transition-all duration-300"
               :style="{ width: progressPercentage + '%' }"
             ></div>
