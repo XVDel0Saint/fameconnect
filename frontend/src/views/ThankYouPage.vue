@@ -63,7 +63,7 @@ const goHome = () => {
           Return to Home
         </button>
         <a
-          href="https://www.manilaFAME.ph"
+          href="https://fameplus.com/"
           target="_blank"
           class="block w-full px-6 py-3 border-2 border-fame-green text-fame-green font-semibold rounded-lg hover:bg-green-50 transition-colors"
         >

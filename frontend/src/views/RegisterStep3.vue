@@ -82,6 +82,17 @@ const editStep = (step: number) => {
   router.push(`/register/step-${step}`)
 }
 
+const handleStartOver = () => {
+  const confirmed = window.confirm(
+    'Are you sure you want to clear all information and start the registration again?'
+  )
+  // restarts all over
+  if (!confirmed) return
+  store.resetForm()
+  router.push('/register/step-1')
+}
+
+
 onMounted(() => {
   const handleBeforeUnload = (event: BeforeUnloadEvent) => {
     if (!store.ui.success) {  // Only warn if registration not submitted
@@ -219,6 +230,17 @@ onMounted(() => {
         >
           <span v-if="isSubmitting" class="inline-block animate-spin">⏳</span>
           {{ isSubmitting ? 'Submitting...' : 'Submit Registration' }}
+        </button>
+      </div>
+      <!-- Start Over -->
+      <div class="pt-1 text-center">
+        <button
+          type="button"
+          @click="handleStartOver"
+          class="text-lg text-red-600 hover:text-red-700 border-red-300 font-semibold underline rounded-lg"
+          :disabled="isSubmitting"
+        >
+          Start Over
         </button>
       </div>
     </div>
