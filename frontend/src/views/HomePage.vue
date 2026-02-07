@@ -152,7 +152,7 @@ onUnmounted(() => {
       @click="prevHeroSlide"
       @mouseenter="heroIsPaused = true"
       @mouseleave="heroIsPaused = false"
-      class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all"
+      class="hidden sm:flex absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all"
       aria-label="Previous slide"
     >
       ←
@@ -161,7 +161,7 @@ onUnmounted(() => {
       @click="nextHeroSlide"
       @mouseenter="heroIsPaused = true"
       @mouseleave="heroIsPaused = false"
-      class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all"
+      class="hidden sm:flex absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all"
       aria-label="Next slide"
     >
       →
