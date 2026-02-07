@@ -3,6 +3,8 @@ import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useDataStore } from '../stores/data'
 import Navbar from '../components/Navbar.vue'
+import { ArrowLeft, ArrowRight } from "lucide-vue-next"
+
 
 const router = useRouter()
 const dataStore = useDataStore()
@@ -152,19 +154,19 @@ onUnmounted(() => {
       @click="prevHeroSlide"
       @mouseenter="heroIsPaused = true"
       @mouseleave="heroIsPaused = false"
-      class="hidden sm:flex absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all"
+      class="hidden sm:flex absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 text-white items-center justify-center transition-all"
       aria-label="Previous slide"
     >
-      ←
+      <ArrowLeft class="w-6 h-6" />
     </button>
     <button
       @click="nextHeroSlide"
       @mouseenter="heroIsPaused = true"
       @mouseleave="heroIsPaused = false"
-      class="hidden sm:flex absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all"
+      class="hidden sm:flex absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 text-white items-center justify-center transition-all"
       aria-label="Next slide"
     >
-      →
+      <ArrowRight class="w-6 h-6" />
     </button>
 
     <!-- Carousel indicators -->
@@ -273,17 +275,21 @@ onUnmounted(() => {
         <!-- Controls -->
         <button
           @click="prevExhibitorSlide"
-          class="absolute -left-6 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-fame-green hover:bg-green-700 text-white flex items-center justify-center transition-all"
+          class="absolute -left-4 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-fame-green hover:bg-green-700 text-white flex items-center justify-center transition-all"
           aria-label="Previous exhibitor"
         >
-          ←
+          <ArrowLeft class="w-4 h-4 sm:w-6 sm:h-6
+           transition-transform
+           group-hover:translate-x-0.5" />
         </button>
         <button
           @click="nextExhibitorSlide"
-          class="absolute -right-6 sm:right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-fame-green hover:bg-green-700 text-white flex items-center justify-center transition-all"
+          class="absolute -right-4 sm:right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-fame-green hover:bg-green-700 text-white flex items-center justify-center transition-all"
           aria-label="Next exhibitor"
         >
-          →
+          <ArrowRight class="w-4 h-4 sm:w-6 sm:h-6
+           transition-transform
+           group-hover:translate-x-0.5" />
         </button>
       </div>
 
@@ -341,7 +347,9 @@ onUnmounted(() => {
             class="w-12 h-12 rounded-full bg-fame-green hover:bg-green-700 text-white flex items-center justify-center transition-all"
             aria-label="Previous testimonial"
           >
-            ←
+            <ArrowLeft class="w-4 h-4 sm:w-6 sm:h-6
+           transition-transform
+           group-hover:translate-x-0.5" />
           </button>
           <div class="flex gap-2">
             <button
@@ -357,7 +365,9 @@ onUnmounted(() => {
             class="w-12 h-12 rounded-full bg-fame-green hover:bg-green-700 text-white flex items-center justify-center transition-all"
             aria-label="Next testimonial"
           >
-            →
+            <ArrowRight class="w-4 h-4 sm:w-6 sm:h-6
+           transition-transform
+           group-hover:translate-x-0.5" />
           </button>
         </div>
       </div>
